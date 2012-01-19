@@ -1,0 +1,81 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (99.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (50.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateHolidays (20120119200200)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "holidays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_from" date, "number_of_days" float, "date_to" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119200200')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("holidays")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-19 20:03:27) [GET]
+
+NameError (uninitialized constant LjmuholidaysController):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-19 20:05:16) [GET]
+  [4;36;1mHoliday Load (0.5ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+Completed in 56ms (View: 51, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-19 20:05:20) [GET]
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (21.5ms)
+Completed in 34ms (View: 30, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-19 20:05:25) [GET]
+  [4;35;1mHoliday Load (0.4ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-19 20:07:00) [GET]
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (16.5ms)
+Completed in 77ms (View: 72, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-01-19 20:07:03) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"Di/F1CL/R5VnSVHRadeLu/SpESeMq5MMjReS37pmWwc=", "holiday"=>{"number_of_days"=>"", "date_to(1i)"=>"2012", "date_to(2i)"=>"1", "date_to(3i)"=>"19", "date_from(1i)"=>"2012", "date_from(2i)"=>"1", "date_from(3i)"=>"19"}}
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (15.2ms)
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/holidays]
