@@ -9,12 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120119200200) do
+ActiveRecord::Schema.define(:version => 20120119204314) do
 
   create_table "holidays", :force => true do |t|
     t.date     "date_from"
     t.float    "number_of_days"
     t.date     "date_to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -79,3 +79,337 @@ Rendering template within layouts/application
 Rendering holidays/new
 Rendered holidays/_form (15.2ms)
 Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/holidays]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateHolidays (20120119200200)
+Migrating to CreateUsers (20120119200904)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119200904')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("holidays")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-19 20:13:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.5ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-01-19 20:13:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, current_user, logged_in?, login_required, new, and redirect_to_target_or_default):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2012-01-19 20:14:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, current_user, logged_in?, login_required, new, and redirect_to_target_or_default):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2012-01-19 20:14:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"current_user", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, current_user, logged_in?, login_required, new, and redirect_to_target_or_default):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-19 20:14:15) [GET]
+
+ActionController::RoutingError (No route matches "/current_user" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-19 20:14:23) [GET]
+
+ActionController::RoutingError (No route matches "/show" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-01-19 20:14:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 62ms (View: 57, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-01-19 20:14:53) [POST]
+  Parameters: {"commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"Di/F1CL/R5VnSVHRadeLu/SpESeMq5MMjReS37pmWwc=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"Elliot", "password"=>"[FILTERED]", "email"=>"me@elliotwainwright.com"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'me@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "password_salt", "password_hash", "email") VALUES('2012-01-19 20:14:53', '2012-01-19 20:14:53', 'Elliot', 'de167df22163eef572582e14621b3a0b5e9e534a', 'bb19f4fb2be52960ac457013be95e339e0d17e00', 'me@elliotwainwright.com')[0m
+Redirected to http://localhost:3000/
+Completed in 108ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-19 20:14:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'me@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'me@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'me@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'me@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'me@elliotwainwright.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'me@elliotwainwright.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'bob') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'you@elliotwainwright.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "password_salt", "password_hash", "email") VALUES('2012-01-19 20:27:39', '2012-01-19 20:27:39', 'bob', 'e42adaffda634aa5a8ce83660825740b580bdf52', '203ea3fa7c532609a7485e5fe0cb62d3f1e09fb3', 'you@elliotwainwright.com')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Bob') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'you@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Sam') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'you@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Sam') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'him@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "password_salt", "password_hash", "email") VALUES('2012-01-19 20:28:17', '2012-01-19 20:28:17', 'Sam', '4516ffcbccb50ed2364b1ebfbd6a331b4f993318', '7d8c3502dc037d93ae382645d8a69aa43f0132f6', 'him@elliotwainwright.com')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Sam') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'her@elliotwainwright.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Jon') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'her@elliotwainwright.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "password_salt", "password_hash", "email") VALUES('2012-01-19 20:29:03', '2012-01-19 20:29:03', 'Jon', 'b384b66ade03f2a74d484976b93c8bc83487f685', '5ae2ab43aba524ae4d16121759092417d9bb1176', 'her@elliotwainwright.com')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Pete') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'her@elliotwainwright.com') LIMIT 1[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-01-19 20:40:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, current_user, logged_in?, login_required, new, and redirect_to_target_or_default):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-19 20:40:12) [GET]
+
+ActionController::RoutingError (No route matches "/user" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-01-19 20:40:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 23ms (View: 18, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-01-19 20:40:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Delete all (78.6ms)[0m   [0mDELETE FROM "users" WHERE ("id" IN (4)) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Delete all (83.7ms)[0m   [0mDELETE FROM "users" WHERE ("id" IN (3)) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Delete all (79.5ms)[0m   [0mDELETE FROM "users" WHERE ("id" IN (2)) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Delete all (65.8ms)[0m   [0mDELETE FROM "users" WHERE ("id" IN (1)) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'me@elliotwainwright.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "password_salt", "password_hash", "email") VALUES('2012-01-19 20:41:38', '2012-01-19 20:41:38', 'Elliot', 'eb8aea8e17115ebae8d7a33ae9d2a1703213a074', '0136c75d248ed6a54c9d6af8ddebe2de184c75b4', 'me@elliotwainwright.com')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateHolidays (20120119200200)
+Migrating to CreateUsers (20120119200904)
+Migrating to AddUserIdToHolidays (20120119204314)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "holidays" ADD "user_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119204314')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("holidays")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-19 20:47:05) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"Di/F1CL/R5VnSVHRadeLu/SpESeMq5MMjReS37pmWwc=", "controller"=>"sessions", "login"=>"elliot", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'elliot') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'elliot') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-19 20:47:13) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"Di/F1CL/R5VnSVHRadeLu/SpESeMq5MMjReS37pmWwc=", "controller"=>"sessions", "login"=>"Elliot", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-19 20:47:17) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"Di/F1CL/R5VnSVHRadeLu/SpESeMq5MMjReS37pmWwc=", "controller"=>"sessions", "login"=>"Elliot", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Elliot') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-19 20:47:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-19 20:47:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (17.0ms)
+Completed in 31ms (View: 25, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-01-19 20:47:28) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"Di/F1CL/R5VnSVHRadeLu/SpESeMq5MMjReS37pmWwc=", "holiday"=>{"number_of_days"=>"2", "date_to(1i)"=>"2012", "date_to(2i)"=>"1", "date_to(3i)"=>"21", "date_from(1i)"=>"2012", "date_from(2i)"=>"1", "date_from(3i)"=>"19"}, "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mHoliday Create (0.4ms)[0m   [0;1mINSERT INTO "holidays" ("number_of_days", "created_at", "date_to", "updated_at", "date_from", "user_id") VALUES(2.0, '2012-01-19 20:47:28', '2012-01-21', '2012-01-19 20:47:28', '2012-01-19', 5)[0m
+Redirected to http://localhost:3000/holidays/1
+Completed in 96ms (DB: 1) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-19 20:47:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/holidays/1]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-19 20:47:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-19 20:48:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.4ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/holidays]

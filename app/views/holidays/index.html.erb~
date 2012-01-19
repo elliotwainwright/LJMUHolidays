@@ -5,7 +5,6 @@
     <th>Date From</th>
     <th>Number Of Days</th>
     <th>Date To</th>
-    <th>User</th>
   </tr>
   <% for holiday in @holidays %>
     <tr>
