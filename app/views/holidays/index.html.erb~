@@ -1,10 +1,15 @@
-<% title "Holidays" %>
-
-<table>
+<% title "LJMU Staff Holiday Booking System" %>
+<br>
+<p><%= link_to "New Holiday", new_holiday_path %></p>
+<br>
+<hr>
+<br>
+<table id="hols">
   <tr>
     <th>Date From</th>
     <th>Number Of Days</th>
     <th>Date To</th>
+    <th>User</th>
   </tr>
   <% for holiday in @holidays %>
     <tr>
@@ -18,5 +23,6 @@
     </tr>
   <% end %>
 </table>
-
+<br>
+<hr>
 <p><%= link_to "New Holiday", new_holiday_path %></p>

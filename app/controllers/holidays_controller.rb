@@ -15,7 +15,7 @@ class HolidaysController < ApplicationController
     @holiday = Holiday.new(params[:holiday])
     @holiday.user_id = current_user.id
     if @holiday.save
-      flash[:notice] = "Successfully created holiday."
+      flash[:notice] = "New Holiday Booking Successfully Created"
       redirect_to @holiday
     else
       render :action => 'new'
@@ -29,7 +29,7 @@ class HolidaysController < ApplicationController
   def update
     @holiday = Holiday.find(params[:id])
     if @holiday.update_attributes(params[:holiday])
-      flash[:notice] = "Successfully updated holiday."
+      flash[:notice] = "Holiday Booking Successfully Updated"
       redirect_to @holiday
     else
       render :action => 'edit'
@@ -39,7 +39,7 @@ class HolidaysController < ApplicationController
   def destroy
     @holiday = Holiday.find(params[:id])
     @holiday.destroy
-    flash[:notice] = "Successfully destroyed holiday."
+    flash[:notice] = "Holiday Booking Successfully Removed"
     redirect_to holidays_url
   end
 end

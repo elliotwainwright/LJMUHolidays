@@ -55,7 +55,7 @@ a:hover {
 
 .credits a
 {
-	color: #ABABAB;
+	color: #BABABA;
 	text-decoration:none;
 	font-family: Helvetica, Arial;
   font-size: 18px;
