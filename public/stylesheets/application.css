@@ -11,7 +11,28 @@ img.ljmulogo {
    position: absolute;
    top: 12px;
    left: 12px;
-   border: inset 2px #CECECE;
+   border: inset 1px #666;
+}
+
+img.ljmucloud {
+   position: absolute;
+   top: 12px;
+   left: 124px;
+   border: inset 1px #666;
+}
+
+img.ljmucompass {
+   position: absolute;
+   top: 12px;
+   left: 236px;
+   border: inset 1px #666;
+}
+
+img.ljmutrophy {
+   position: absolute;
+   top: 12px;
+   left: 348px;
+   border: inset 1px #666;
 }
 
 a img {
@@ -69,23 +90,19 @@ a:hover {
 
 div.logoutorin {
   float: right;
-  padding: 0;
+  padding: 5px;
   margin: 0;
-  color: #EEE;
   font-family: Helvetica, Arial;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 div.logoutorin a {
-  color: #DDD;
-  font-family: Helvetica, Arial;
-  font-size: 18px;
+  color: #AAA;
+  text-decoration:none;
 }
 
 div.logoutorin a:hover {
-  color: #888;
-  font-family: Helvetica, Arial;
-  font-size: 18px;
+  color: #EEE;
 }
 
 #container {
@@ -126,12 +143,13 @@ td.emphasis {
 
 #flash_notice, #flash_error {
   position: fixed;
-  left: 140px;
+  left: 480px;
   top: 30px;
-  padding: 0;
+  padding: 4px;
   margin: 0;
   font-family: Helvetica, Arial;
-  font-size: 18px;
+  font-size: 24px;
+  border: inset 1px #000;
 }
 
 #flash_notice {
@@ -140,8 +158,8 @@ td.emphasis {
 }
 
 #flash_error {
-  background-color: #4B7377;
-  color: #EEE;
+  background-color: #c5344a;
+  color: #000;
 }
 
 .fieldWithErrors {

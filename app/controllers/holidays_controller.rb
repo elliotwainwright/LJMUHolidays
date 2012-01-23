@@ -1,6 +1,7 @@
 class HolidaysController < ApplicationController
   def index
-    @holidays = Holiday.all
+    
+    @holidays = Holiday.find_all_by_user_id(current_user.id)
   end
 
   def show

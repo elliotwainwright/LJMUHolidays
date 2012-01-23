@@ -8,6 +8,7 @@
   </head>
   <body>
       <img class="ljmulogo" src="/images/ljmulogowhite.jpg" />
+      <img class="ljmucompass" src="/images/ljmucompass.png" />
   <div class="header">
 
     <div class="logoutorin"><%= render :partial => "users/login" %></div>
@@ -23,12 +24,11 @@
       <%- end -%>
 
       <%= yield %>
-
 		</div>
 			
 			<div class="footer">
 
-				<div class="credits"><a href="http://www.elliotwainwright.com">Elliot Wainwright</a></div>
+				<div class="credits"><a href="http://www.elliotwainwright.com">Site Design by Elliot Wainwright</a></div>
 
 			</div>
   </body>
