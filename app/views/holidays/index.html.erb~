@@ -1,5 +1,4 @@
 <% title "LJMU Staff Holiday Booking System" %>
-<br>
 <p><%= link_to "New Holiday", new_holiday_path %></p>
 <br>
 <hr>

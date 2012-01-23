@@ -1,4 +1,4 @@
-<% title "Holiday" %>
+<% title "Holiday Booking Details" %>
 <table>
 <tr>
 <td class="emphasis">Date From:</td>
@@ -14,7 +14,9 @@
 </tr>
 </table>
 
-<p>
+<p id="backbutton">
+<br>
+<hr>
   <%= link_to "Edit", edit_holiday_path(@holiday) %> |
   <%= link_to "Destroy", @holiday, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", holidays_path %>

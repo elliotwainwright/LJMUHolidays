@@ -9,6 +9,7 @@
     <th>Number Of Days</th>
     <th>Date To</th>
     <th>User</th>
+    <th>Approved</th>
   </tr>
   <% for holiday in @holidays %>
     <tr>
@@ -16,6 +17,7 @@
       <td><%=h holiday.number_of_days %></td>
       <td><%=h holiday.date_to %></td>
       <td><%=h holiday.user.username %></td>
+      <td><%=h holiday.approved %></td>
       <td><%= link_to "Show", holiday %></td>
       <td><%= link_to "Edit", edit_holiday_path(holiday) %></td>
       <td><%= link_to "Destroy", holiday, :confirm => 'Are you sure?', :method => :delete %></td>

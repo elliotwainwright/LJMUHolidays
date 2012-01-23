@@ -4,11 +4,14 @@
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
     <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'calendar/grey/style' %>
     <%= yield(:head) %>
   </head>
   <body>
       <img class="ljmulogo" src="/images/ljmulogowhite.jpg" />
+      <img class="ljmucloud" src="/images/ljmucloud.png" />
       <img class="ljmucompass" src="/images/ljmucompass.png" />
+      <img class="ljmutrophy" src="/images/ljmutrophy.png" />
   <div class="header">
 
     <div class="logoutorin"><%= render :partial => "users/login" %></div>
@@ -28,7 +31,7 @@
 			
 			<div class="footer">
 
-				<div class="credits"><a href="http://www.elliotwainwright.com">Site Design by Elliot Wainwright</a></div>
+				<div class="credits"><a href="http://www.elliotwainwright.com/wip">Site Design by Elliot Wainwright</a></div>
 
 			</div>
   </body>

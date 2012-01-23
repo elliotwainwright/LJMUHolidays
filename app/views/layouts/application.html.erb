@@ -4,6 +4,7 @@
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
     <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'calendar/grey/style' %>
     <%= yield(:head) %>
   </head>
   <body>
@@ -30,7 +31,7 @@
 			
 			<div class="footer">
 
-				<div class="credits"><a href="http://www.elliotwainwright.com">Site Design by Elliot Wainwright</a></div>
+				<div class="credits"><a title="My 'Work-in-progress' personal site" href="http://www.elliotwainwright.com/wip">Site Design by Elliot Wainwright</a></div>
 
 			</div>
   </body>

@@ -122,6 +122,16 @@ div.logoutorin a:hover {
   font-size: 40px;
 }
 
+#nextsixmonths {
+width:100%;
+margin:auto;
+text-align:center;
+}
+.cal {
+float:left;
+margin: 2px;
+}
+
 #hols {
   text-align: center;
   width: 100%;
@@ -136,6 +146,10 @@ div.logoutorin a:hover {
   border-right: dashed 2px #CECECE;
 } 
 
+#backbutton {
+clear:both;
+}
+
 td.emphasis {
   font-weight: bold;
   padding-right: 5px;
@@ -148,8 +162,8 @@ td.emphasis {
   padding: 4px;
   margin: 0;
   font-family: Helvetica, Arial;
-  font-size: 18px;
-  border: inset 1px #000;
+  font-size: 24px;
+
 }
 
 #flash_notice {
