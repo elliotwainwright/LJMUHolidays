@@ -35,6 +35,16 @@ img.ljmutrophy {
    border: inset 1px #666;
 }
 
+#login {
+position:absolute;
+float:left;
+}
+
+#holidaypic {
+  position: relative;
+  float:left;
+}
+
 a img {
   border: none;
 }
@@ -126,6 +136,7 @@ div.logoutorin a:hover {
 width:100%;
 margin:auto;
 }
+
 .cal {
 float:left;
 margin: 2px;
@@ -150,11 +161,6 @@ clear:both;
 }
 
 td.emphasis {
-  font-weight: bold;
-  padding-right: 5px;
-}
-
-#formlabel {
   font-weight: bold;
   padding-right: 5px;
 }

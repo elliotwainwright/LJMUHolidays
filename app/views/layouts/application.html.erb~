@@ -28,11 +28,15 @@
 
       <%= yield %>
 		</div>
-			
-			<div class="footer">
 
-				<div class="credits"><a href="http://www.elliotwainwright.com/wip">Site Design by Elliot Wainwright</a></div>
+    <div id="holidaypic">
+		  <img src="/images/photo.jpg" />
+    </div>
 
-			</div>
+		<div class="footer">
+
+		  <div class="credits"><a title="My 'Work-in-progress' personal site" href="http://www.elliotwainwright.com/wip">Site Design by Elliot Wainwright</a></div>
+
+		</div>
   </body>
 </html>

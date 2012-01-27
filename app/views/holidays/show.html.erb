@@ -1,4 +1,6 @@
 <% title "Holiday Booking Details" %>
+<% if current_user.id == @holiday.user_id or current_user.id == 14 %>
+
 <table>
 <tr>
 <td class="emphasis">Date From:</td>
@@ -23,3 +25,13 @@
   <%= link_to "Destroy", @holiday, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", holidays_path %>
 </p>
+
+    <% else %>
+    <p>You do not have access to this record</p>
+    <p>
+    <hr>
+    </p>
+    <%= link_to "ClicK Here to Go Back to List of All Holiday Requests", holidays_path %>
+    <br>
+    <br>
+    <% end %>
