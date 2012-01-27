@@ -13,8 +13,13 @@
     <%= f.date_select :date_to %>
   </p>
     <p>
+    <% if current_user.id == 14 %>
     <%= f.label :approved %><br />
     <%= f.check_box(:approved) %>
+    <% else %>
+    <%= f.label :approved %><br />
+    <%=h @holiday.approved %></td>
+    <% end %>
   </p>
   <p><%= f.submit %></p>
   <hr>

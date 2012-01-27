@@ -125,7 +125,6 @@ div.logoutorin a:hover {
 #nextsixmonths {
 width:100%;
 margin:auto;
-text-align:center;
 }
 .cal {
 float:left;
@@ -151,6 +150,11 @@ clear:both;
 }
 
 td.emphasis {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+#formlabel {
   font-weight: bold;
   padding-right: 5px;
 }
